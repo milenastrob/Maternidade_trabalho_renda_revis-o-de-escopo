@@ -43,7 +43,7 @@ section,header{scroll-margin-top:76px}
 @media (min-width:1181px){.mobile-menu{display:none}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:24px}
 .hero-flowers{width:100%;max-width:560px;height:auto;display:block;margin-left:-40px;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{height:330px;overflow:hidden;display:flex;justify-content:center}.hero-flowers{max-width:300px;margin-left:0;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}.hero-grid > *{min-width:0;max-width:100%}.hero-art{height:330px;overflow:hidden;display:flex;justify-content:center}.hero-flowers{max-width:300px;margin-left:0;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}}
 .frame{position:relative;border:1px solid #99A285;outline:1px solid rgba(153,162,133,.45);outline-offset:-9px;background:#F8F6F0;box-shadow:0 30px 70px -40px rgba(38,42,33,.45)}
 .letter{position:relative;background:#FCFBF7;border:1px solid #E8E4D9;box-shadow:0 1px 0 #E8E4D9,0 18px 40px -28px rgba(70,74,64,.35)}
 .card{background:#FCFBF7;border:1px solid #E8E4D9;border-radius:6px}
@@ -114,7 +114,20 @@ main > section{padding:72px 16px!important}
 [role="tabpanel"]{padding:22px!important}
 .tab{flex:1 1 calc(50% - 8px);text-align:center}
 main .btn{width:100%}
-.toTop{right:14px;bottom:14px}
+.toTop{right:14px;bottom:14px;width:44px;height:44px}
+.hero-art{height:300px!important}
+.hero-flowers{max-width:260px!important}
+#inicio .frame{padding:36px 20px!important;gap:18px!important;outline-offset:-7px}
+#inicio .frame .eyebrow{letter-spacing:.16em;font-size:11px}
+#inicio .frame h1{font-size:34px!important;overflow-wrap:break-word}
+nav a[href="#inicio"] > span:last-child{font-size:16px!important;line-height:1.25}
+nav a[href="#inicio"] > span:first-child{width:42px!important;height:42px!important}
+#percurso ol > li[aria-hidden="true"]{display:none}
+#percurso .step-dot{width:40px!important;height:40px!important;font-size:18px!important}
+#percurso summary{gap:12px!important}
+#percurso summary > span:nth-of-type(2) > span:first-child{font-size:19px!important;line-height:1.25!important}
+#percurso details > div{margin-left:52px!important;margin-top:12px!important;font-size:15px!important}
+#percurso ol{gap:22px!important}
 }
 @media print{
 @page{size:A4;margin:16mm 14mm}
