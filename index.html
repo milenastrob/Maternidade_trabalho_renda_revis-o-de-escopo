@@ -95,6 +95,27 @@ html{scroll-behavior:auto}
 .progress{animation:none!important;display:none}
 .chev,.btn,.tab,.step-dot{transition:none}
 }
+[hidden]{display:none!important}
+.tab[aria-selected="true"]{background-color:#464A40!important;color:#F8F6F0!important;border-color:#464A40!important}
+.tab[aria-selected="false"]:hover{filter:brightness(.94)}
+body{overflow-x:hidden}
+main img{max-width:100%}
+#achados [style*="font-size: 52px"]{font-size:clamp(34px,4.2vw,50px)!important}
+@media (max-width:900px){
+#inicio > img.no-print{width:240px!important;right:-30px!important;top:0!important;opacity:.6!important}
+#motivacoes{min-height:0!important}
+.letter{transform:none!important}
+}
+@media (max-width:640px){
+#inicio{padding:24px 16px 64px!important}
+main > section{padding:72px 16px!important}
+#inicio > img.no-print{display:none}
+#percurso details > div{margin-left:0!important;margin-top:16px!important}
+[role="tabpanel"]{padding:22px!important}
+.tab{flex:1 1 calc(50% - 8px);text-align:center}
+main .btn{width:100%}
+.toTop{right:14px;bottom:14px}
+}
 @media print{
 @page{size:A4;margin:16mm 14mm}
 body{background:#FFFFFF;font-size:11pt}
@@ -310,7 +331,7 @@ a{text-decoration:none}
 
 
 <!-- ============ 04 · O QUE NOS MOVE ============ -->
-<div aria-hidden="true" style="display: flex; justify-content: center; padding: 0 24px"></div><section id="motivacoes" class="on-sage" aria-labelledby="t-motivacoes" style="padding: 72px 24px 112px; height: 1654px">
+<div aria-hidden="true" style="display: flex; justify-content: center; padding: 0 24px"></div><section id="motivacoes" class="on-sage" aria-labelledby="t-motivacoes" style="padding: 72px 24px 112px; min-height: 1654px">
 <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
 <div class="reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px">
 <p class="eyebrow">04 · O que nos move</p>
